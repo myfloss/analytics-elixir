@@ -120,8 +120,8 @@ end
 
 defmodule Segment.Analytics.Context do
   @moduledoc false
-  @library_name Mix.Project.get().project[:description]
-  @library_version Mix.Project.get().project[:version]
+  @library_name Mix.Project.get().project()[:description]
+  @library_version Mix.Project.get().project()[:version]
 
   defstruct [
     :active,

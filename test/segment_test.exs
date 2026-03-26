@@ -11,7 +11,7 @@ defmodule SegmentTest do
       self()
     )
 
-    Segment.start_link(System.get_env("SEGMENT_KEY"))
+    Segment.start_link("test_key", {Segment.Http.Stub, []})
 
     Segment.Analytics.track("user1", "track debugging #{elem(:os.timestamp(), 2)}")
 
